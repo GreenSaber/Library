@@ -1,0 +1,14 @@
+package Pac6;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class tst_maxValueCalc {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}
