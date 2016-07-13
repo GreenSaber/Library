@@ -13,22 +13,23 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 @RunWith(value = Parameterized.class)
 public class tst_calc {
-	private String pass_value;
+	private ArrayList<String> parameters;
 	private Double expected_result;
 	private ExpCalc ec;
 @Parameters
 public static Collection<Object[]> set_of_parameters()
 	{
 		return Arrays.asList(new Object[][]{
-			{0.25, new ArrayList<String>(Arrays.asList("1","2","3"))},
+			
+			{2.0, new ArrayList<String>(Arrays.asList("1","1","0"))},
 	
 		});
 	}
 
-public tst_calc(Double expected_result, String pass_value)
+public tst_calc(Double expected_result, ArrayList<String> parameters)
 {
 	this.expected_result=expected_result;
-	this.pass_value=pass_value;
+	this.parameters=parameters;
 }
 @Before
 public void setUp()
@@ -37,7 +38,8 @@ public void setUp()
 }
 @Test
 	public void tstExpCalc() 
+	
 {
-	assertEquals(expected_result, ec.calc(pass_value));
+	assertEquals(expected_result, Double.valueOf(ec.calc(parameters.get(0),parameters.get(1),parameters.get(2))));
 }
 }

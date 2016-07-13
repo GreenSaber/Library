@@ -6,18 +6,17 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MaxMin1 {
+public class MaxMinValue {
 	
-	private static boolean answ;
-	public boolean isNumber(String s){  
+	public boolean isNumber(String s){
+		boolean answ;
 		Pattern p = Pattern.compile("[\\x00-\\x20]*[+-]?(((((\\p{Digit}+)(\\.)?((\\p{Digit}+)?)([eE][+-]?(\\p{Digit}+))?)|(\\.((\\p{Digit}+))([eE][+-]?(\\p{Digit}+))?)|(((0[xX](\\p{XDigit}+)(\\.)?)|(0[xX](\\p{XDigit}+)?(\\.)(\\p{XDigit}+)))[pP][+-]?(\\p{Digit}+)))[fFdD]?))[\\x00-\\x20]*");		
         Matcher m = p.matcher(s);
         answ=m.matches();
         return answ;
 	}
 	
-	private static String a1,a2,a3;;
-	
+	private static String a1,a2,a3;
 	public void input(){
 		System.out.println("Please enter the 1st real number:");
 		Scanner sc = new Scanner(System.in);
@@ -28,8 +27,9 @@ public class MaxMin1 {
 		a3=sc.nextLine();	
 	}
 		
-	private static double v1,v2,v3,max;
 	public double maxValueCalc(String s1, String s2, String s3){
+		double v1,v2,v3,max;
+		max=0;
 		v1 = Double.parseDouble(s1);
 		v2 = Double.parseDouble(s2);
 		v3 = Double.parseDouble(s3);
@@ -48,8 +48,9 @@ public class MaxMin1 {
 		return max;	
 	}
 	
-	private static double c1,c2,c3,min;
 	public double minValueCalc(String s1, String s2, String s3){
+		double c1,c2,c3,min;
+		min=0;
 		c1 = Double.parseDouble(s1);
 		c2 = Double.parseDouble(s2);
 		c3 = Double.parseDouble(s3);
@@ -69,7 +70,7 @@ public class MaxMin1 {
 	}	
 
 	public static void main(String[] args) {
-		MaxMin1 mm =new MaxMin1();
+		MaxMinValue mm =new MaxMinValue();
 		mm.input();
 		if (mm.isNumber(a1)&mm.isNumber(a2)&mm.isNumber(a3)==true){
 			System.out.println("The maximum value is "+mm.maxValueCalc(a1, a2, a3));

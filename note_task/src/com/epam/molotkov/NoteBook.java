@@ -1,21 +1,21 @@
-package note_task;
+package com.epam.molotkov;
 
 import java.util.ArrayList;
 
 public class NoteBook {
 
-	private ArrayList<Note> array_notes;
+	private ArrayList<Note> arrayNotes;
 
 	public NoteBook(){
-		array_notes = new ArrayList<Note>();
+		arrayNotes = new ArrayList<Note>();
 	}
 	
 	public ArrayList<Note> getNotes(){
-		return array_notes;
+		return arrayNotes;
 	}
 	
 	public void createNote(Note note){
-		array_notes.add(note);
+		arrayNotes.add(note);
 	}
 	
 	public boolean equals(Object obj){
@@ -38,16 +38,15 @@ public class NoteBook {
 //	public int hashCode(){
 //	
 //}
-	private String ans;
+	
 	public String toString(){
+		String ans="NoteBook : ";
 		
-		
-		for (int i = 0; i < array_notes.size(); i++){
-			 ans +=array_notes.get(i);
+		for (int i = 0; i < arrayNotes.size(); i++){
+			 ans +=arrayNotes.get(i);
 		 }
 		
-		return ans;
+		return getClass().getName()+ans;
 	}
 	
 }
-

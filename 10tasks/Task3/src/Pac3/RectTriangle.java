@@ -52,7 +52,7 @@ public class RectTriangle {
 			rt.perimCalc(a,b);
 			System.out.println("Perimetr equals "+P);
 			rt.squareCalc(a,b);
-			System.out.println("Perimetr equals "+S);		
+			System.out.println("Square equals "+S);		
 		}
 		else 
 		{

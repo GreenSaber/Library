@@ -8,8 +8,8 @@ public class FourDigit {
 	
 	private static boolean answ;
 	public boolean isNumber(String s){  
-		Pattern p = Pattern.compile("[\\x00-\\x20]*[+-]?(((((\\p{Digit}+)(\\.)?((\\p{Digit}+)?)([eE][+-]?(\\p{Digit}+))?)|(\\.((\\p{Digit}+))([eE][+-]?(\\p{Digit}+))?)|(((0[xX](\\p{XDigit}+)(\\.)?)|(0[xX](\\p{XDigit}+)?(\\.)(\\p{XDigit}+)))[pP][+-]?(\\p{Digit}+)))[fFdD]?))[\\x00-\\x20]*");		
-        Matcher m = p.matcher(s);
+		Pattern p = Pattern.compile("\\d+");
+		Matcher m = p.matcher(s);
         answ=m.matches();
         return answ;
 	}
@@ -46,6 +46,7 @@ public class FourDigit {
 						+ "Please restart the program and enter the correct value.");	
 			}
 			else {
+				fd.isEqual(a);
 				System.out.println(res);
 			}
 		}

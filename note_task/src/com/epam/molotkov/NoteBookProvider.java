@@ -1,4 +1,4 @@
-package note_task;
+package com.epam.molotkov;
 
 public class NoteBookProvider {
 	

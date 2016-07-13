@@ -22,8 +22,7 @@ public static Collection<Object[]> set_of_parameters()
 			{true, "1234"},
 			{false, "abcd"},
 			{false, "123q"},
-			{true, "-0000"},
-			{true, "1234.4"},
+			{true, "0000"},
 		});
 	}
 
