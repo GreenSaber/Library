@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movies-list>
+	<movie id="1">
+		<name>Godfather</name>
+		<country>USA</country>
+		<date>1972</date>
+	</movie>
+	<movie id="2">
+		<name>Un Prophete</name>
+		<country>France</country>
+		<date>2009</date>
+	</movie>
+	<movie id="3">
+		<name>Коммунист</name>
+		<country>СССР</country>
+		<date>1957</date>
+	</movie>
+</movies-list>
