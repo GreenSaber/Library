@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="http://www.epam.tc.com/country"
+ xmlns:tns="http://www.epam.tc.org/country">
+<element name="countries-list">
+<complexType>
+	<sequence>
+		<element name="country" type="tns:Country"/>
+	</sequence>
+</complexType>
+</element>
+	
+<complexType name="Country">
+	<sequence>
+		<element name="name" type="string"/>
+		<element name="capital" type="string"/>
+		<element name="population" type="string"/>
+	</sequence>
+	<attribute name="id" type="int" use="required"/>		
+</complexType>
+</schema>
